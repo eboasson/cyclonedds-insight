@@ -33,6 +33,11 @@ jobs:
       inputs:
         versionSpec: $(PY_VERSION)
     
+    - bash: |
+        python.exe -m pip install --upgrade pip
+      name: update_pip
+      displayName: Update pip
+
     # Build CycloneDDS
     - bash: |
         mkdir -p deps
